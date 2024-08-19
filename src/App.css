@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scene-component {
+  width: 100%;
+  height: 80vh;
+  margin: 0;
+  padding: 0;
+}
