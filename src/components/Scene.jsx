@@ -19,12 +19,15 @@ const Scene = ({ style }) => {
 
 
 const styles = {
-    canvasContainer: {
-        width: '50%',
-        height: '100vh', // Make the container full height
-        margin: 0,
-        padding: 0,
-        overflow: 'hidden', // Ensure no scrollbars are added
-      },
-}
+sceneContainer: {
+    width: '50%',
+    height: '100%',
+    float: 'left',
+    position: 'relative',
+    },
+    canvas: {
+    width: '100%',
+    height: '100%',
+    },
+};
 export default Scene;

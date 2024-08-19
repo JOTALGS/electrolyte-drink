@@ -4,6 +4,7 @@ import Header from './components/Header';
 import HomeSection from './components/HomeSection';
 import BrandCarousel from './components/BrandCarousel';
 import Scene from './components/Scene';
+import ProductItem from './components/ProductItem';
 
 function App() {
   return (
@@ -13,54 +14,34 @@ function App() {
       <BrandCarousel />
       <section className="scene-component">
         <Scene style={{ 'height': '800px', 'margin-left': 'auto'}}/>
+        <div style={styles.productSection}>
+          <ProductItem
+            title="Product Title"
+            price="99.99"
+            initialImage="/images/texture1.jpg"
+            hoverImage="/images/texture2.jpg"
+          />
+        </div>
       </section>
-
-      <div className='p-10'>
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
-      <div className='p-10'>
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
-      <div className='p-10'>
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
-      <div className='p-10'>
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </div>
     </div>
   );
 }
+
+const styles = {
+  section: {
+    display: 'flex',
+    height: '100vh',
+  },
+  productSection: {
+    width: '40%',
+    height: '60%',
+    alignSelf: 'center',
+    padding: '20px',
+    boxSizing: 'border-box',
+    position: 'absolute',
+    top: '120vh',
+  },
+};
+
 
 export default App;
